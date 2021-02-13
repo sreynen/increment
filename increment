@@ -19,7 +19,7 @@ with open('data.json', 'w', encoding='utf8') as data_file:
 with open('index.html.template', 'r', encoding='utf8') as template_file:
   html_template = template_file.read()
     
-html = html_template.replace('{{ value }}', data['value']).replace('{{ updated }}', data['updated'])
+html = html_template.replace('{{ value }}', str(data['value'])).replace('{{ updated }}', data['updated'])
 
 with open('docs/index.html', 'w', encoding='utf8') as html_file:
   html_file.write(html)
