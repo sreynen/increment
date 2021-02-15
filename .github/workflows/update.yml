@@ -19,6 +19,9 @@ jobs:
     - name: Increment
       run: |-
         ./increment
+    - name: Copy data file
+      run: |-
+        cp ./data.json ./docs/data.json
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
